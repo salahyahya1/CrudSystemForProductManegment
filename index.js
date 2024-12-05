@@ -156,16 +156,16 @@ function Update_item(index) {
     // document.getElementById("add").setAttribute('style', 'display:none !important');
     // document.getElementById("Update_button").setAttribute('style', 'display:block !important');
     // how to change the buttons sol 2 this sol is  better , cleaner and more maintainable
-    document.getElementById("add").classList.add('hidden');
-    document.getElementById("Update_button").classList.add('visible');
+    document.getElementById("add").classList.replace('d-block', 'd-none');
+    document.getElementById("Update_button").classList.replace('d-none', 'd-block');
 
 
     updatedIndex = index;
 }
 document.getElementById("Update_button").addEventListener("click", () => {
     SaveUpdates();
-    document.getElementById("add").classList.remove('hidden');
-    document.getElementById("Update_button").classList.remove('visible');
+    document.getElementById("add").classList.replace('d-none', 'd-block');
+    document.getElementById("Update_button").classList.replace('d-block', 'd-none');
 
 });
 function SaveUpdates() {
