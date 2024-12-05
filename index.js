@@ -126,7 +126,6 @@ function Delete_item(index) {
 }
 function Update_item(index) {
     document.getElementById("Update_button").dataset.index = index;  // ** this line for solving the problem of changed index to brevies one **
-    // console.log(index);
     ProductName.value = product_list[index].name;
     ProductPrice.value = product_list[index].price;
     ProductCategory.value = product_list[index].Category;
@@ -165,8 +164,8 @@ function Update_item(index) {
 }
 document.getElementById("Update_button").addEventListener("click", () => {
     SaveUpdates();
-    //    document.getElementById("add").classList.remove('hidden');
-    //    document.getElementById("Update_button").classList.remove('visible');
+    document.getElementById("add").classList.remove('hidden');
+    document.getElementById("Update_button").classList.remove('visible');
 
 });
 function SaveUpdates() {
